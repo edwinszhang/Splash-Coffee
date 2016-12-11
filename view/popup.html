@@ -1,0 +1,28 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Splash Coffee</title>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css"> 
+    <link rel="stylesheet" type="text/css" href="/css/style.css"> 
+  </head>
+  <body>
+    <div id="container" class="flex-container popup-container ">
+      <div class="row">
+        <p id="timer" class="timer flex-item"> 25 : 00 </p>
+        <p id="button" class="button flex-item"> 
+          <span id="start"> Start </span>
+          <span id="stop"> Stop </span>
+        </p>
+        <img class="popup-icon flex-item" alt="Splash Coffee" title="Click me" src="/assets/splashCoffee.svg"> 
+        <p class="copyright flex-item"> © Splash Coffee </p>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="/js/popup.js"></script>
+</html>
+
