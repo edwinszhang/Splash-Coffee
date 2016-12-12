@@ -14,6 +14,7 @@ const IMAGE_REDIRECT_URL = "imageRedirectURL";
 const LOAD_INTERVAL = "loadInterval";
 const LAST_LOAD = "lastLoad";
 const DEFAULT_INTERVAL = 10 * 60 * 1000; // 10 min
+const FULLSCREEN_FLG = true; // 10 min
 
 function BindingBackgroundListeners() {
     registerDownloadListener(event);
@@ -103,8 +104,8 @@ function loadingRedirectUrl(callback, src) {
                     callback(redirect);
                 }
             } else {
-                // useAjax = false;
-                // loadUnsplashImageOnSafari(callback, src);
+                useAjax = false;
+                callback('/img/default.jpg');
             }
         }
 
@@ -143,7 +144,24 @@ function isRequireToReload() {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - //
 
+function createFullscreen() {
+    clearFullscreenNotification();
 
+    chrome.windows.create(
+        {
+            url: '/view/fullscreen.html',
+            type: 'detached_panel',
+            focused: true
+        },
+        function(breakWindow) {
+            breakId = breakWindow.id;
+            chrome.windows.update(breakWindow.id, {
+                state: 'fullscreen'
+            });
+        }
+    );
+}
 
-
-
+function clearFullscreenNotification(){
+    
+}

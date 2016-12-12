@@ -1,6 +1,8 @@
 // initialization
 $(function(){
 	buildClock();
+	// TODO
+	createFullscreen();
 });
 
 function buildClock() {
