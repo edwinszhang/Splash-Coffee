@@ -9,11 +9,13 @@
     <title>Splash Coffee</title>
     <link rel="stylesheet" type="text/css" href="/css/normalize.css"> 
     <link rel="stylesheet" type="text/css" href="/css/style.css"> 
+    <link rel="stylesheet" type="text/css" href="/css/flipclock.css">
+    <link rel="stylesheet" type="text/css" href="/css/clock-resize.css">
   </head>
   <body>
     <div id="container" class="flex-container popup-container ">
       <div class="row">
-        <p id="timer" class="timer flex-item"> 25 : 00 </p>
+        <div id="timer" class="timer flex-item"></div>
         <p id="button" class="button flex-item"> 
           <span id="start"> Start </span>
           <span id="stop"> Stop </span>
@@ -23,6 +25,10 @@
       </div>
     </div>
   </body>
-  <script type="text/javascript" src="/js/popup.js"></script>
+  
+  <script src="/js/jquery-3.1.1.min.js"></script>
+  <script src="/js/flipclock.min.js"></script>
+  <script src="/js/popup.js"></script>
+  <script src="/js/timer.js"></script>
 </html>
 

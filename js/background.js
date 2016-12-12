@@ -4,6 +4,7 @@
 $(document).ready(function(){
   BindingBackgroundListeners(event);
   loadingImage(false, event);
+  buildClock();
 });
 
 
@@ -54,7 +55,8 @@ function loadingImage(forceReload) {
 // set background
 function setBackground(src) {
     $('#background').css("background-image", "url('"
-        + src + "')").delay(1000).fadeIn(3000);
+        + src + "')").delay(500).fadeIn(1000);
+    $('#overlay').delay(500).fadeIn(1000);
 }
 
 // loading unsplash images

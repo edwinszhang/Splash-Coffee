@@ -4,6 +4,8 @@
 }
 
 .flex-container {
+	height: 100%;
+	width: 100%;
 	display: -webkit-flex; /* Safari */
 	display: flex;
 	flex-direction: column;
@@ -35,8 +37,15 @@
 }
 
 .timer {
+	height: 100px;
+	width: 100px;
 	font-size: 4em;
 	font-weight: 800;
+}
+
+.timer-large {
+	zoom: 1.5;
+   -moz-transform: scale(1.5)
 }
 
 .button {
@@ -49,8 +58,8 @@ p {
 
 /* popup  */
 .popup-container {
-	min-height: 200px;
-	width: 300px;
+	min-height: 300px;
+	width: 500px;
 	color: #333333;
 	background-color: whitesmoke;
 	text-align: center;
@@ -94,6 +103,7 @@ p {
 	position: fixed;
 	height: 100%;
 	width: 100%;
+	display: none;
 	color: white;
 	font-size: 2em;
 	z-index: 10;

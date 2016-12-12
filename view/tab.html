@@ -4,14 +4,16 @@
 <head>
     <title>New tab</title>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <link rel="stylesheet" type="text/css" href="/css/normalize.css"> 
-    <link rel="stylesheet" type="text/css" href="/css/style.css"> 
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">  
+    <link rel="stylesheet" type="text/css" href="/css/flipclock.css">
+    <link rel="stylesheet" type="text/css" href="/css/clock-resize.css">
 </head>
 
 <body>
 	<div id="main-wrapper">
 		<!-- underlay -->
-		<div class="underlay flex-container">
+		<div class="underlay flex-container" id="underlay">
 			<div class="row">
 				<div class="flex-item">
 					<img class='icon-large' src="/assets/splashCoffee-white.svg">
@@ -21,14 +23,21 @@
 		<!-- images -->
 		<div class="background" id="background"></div>
 		<!-- overlay -->
-		<div class="overlay">
+		<div class="overlay" id="overlay">
+			<div class="flex-container">
+				<div class="row">
+					<div id="timer" class="time-large flex-item"></div>
+				</div>
+			</div>
 			<!-- bottom left -->
-			<div class='bottom-left' id='action'>
+			<div class='bottom-left'>
 				<img class='icon-small download' id="download" src="/assets/icon-download.svg">
 			</div>
 		</div>
 	</div>
 </body>
-<script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="/js/background.js"></script>
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/flipclock.min.js"></script>
+<script src="/js/background.js"></script>
+<script src="/js/timer.js"></script>
 </html>
