@@ -50,7 +50,7 @@
 
 
 #clock.light{
-	background-color: rgba(243,243,243,0.6);
+	background-color: rgba(243,243,243,0.2);
 	color:#272e38;
 }
 
@@ -69,7 +69,7 @@
 }
 
 #clock.light .display{
-	background-color: rgba(221,221,221,0.4);
+	background-color: rgba(221,221,221,0.2);
 	box-shadow:0 1px 1px rgba(0,0,0,0.08) inset, 0 1px 1px #fafafa;
 }
 
