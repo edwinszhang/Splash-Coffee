@@ -5,9 +5,10 @@
     <title>New tab</title>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <link rel="stylesheet" type="text/css" href="/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">  
-    <link rel="stylesheet" type="text/css" href="/css/flipclock.css">
-    <link rel="stylesheet" type="text/css" href="/css/clock-resize.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/clock.css">  
+    <!-- <link rel="stylesheet" type="text/css" href="/css/flipclock.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="/css/clock-resize.css"> -->
 </head>
 
 <body>
@@ -26,7 +27,19 @@
 		<div class="overlay" id="overlay">
 			<div class="flex-container">
 				<div class="row">
-					<div id="timer" class="time-large flex-item"></div>
+					<div id="clock" class="light">
+						<div class="display">
+							<div class="date"></div>
+							<div class="digits">
+							</div>
+						</div>
+					</div>
+
+					<div class="button-holder">
+						<a class="alarm-button"></a>
+					</div>
+
+				</div>
 				</div>
 			</div>
 			<!-- bottom left -->
@@ -39,5 +52,6 @@
 <script src="/js/jquery-3.1.1.min.js"></script>
 <script src="/js/flipclock.min.js"></script>
 <script src="/js/background.js"></script>
+<script src="/js/moment.js"></script>
 <script src="/js/timer.js"></script>
 </html>
