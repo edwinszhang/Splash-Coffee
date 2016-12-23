@@ -4,7 +4,6 @@
 $(document).ready(function(){
   BindingBackgroundListeners(event);
   loadingImage(false, event);
-  buildClock();
 });
 
 
